@@ -1,14 +1,15 @@
+
 import random
 import time
 
-print("I" * 190)
+print("I" *190)
 print("\n\t\t\t\t\t PLAYING HAND CRICKET WITH COMPUTER USING PYTHON AND RANDOM FUCTION\n ")
 print("I" * 190)
 
 print()
-print(":" * 60)
+print("." * 60)
 print("\t\t\tTOSS TIME")
-print(":" * 60)
+print("." * 60)
 
 
 def start_game():
@@ -151,7 +152,6 @@ if (Total % 2 == 0 and User_Choice == "even") or (Total % 2 != 0 and User_Choice
             if  Computer_score > Your_score:
                 break
 
-            
             print(f"\nComputer_Current_Score: {Computer_score}")
 
             Your_bowling_runs=your_bowling()
@@ -159,7 +159,8 @@ if (Total % 2 == 0 and User_Choice == "even") or (Total % 2 != 0 and User_Choice
             Computer_batting_runs = random.randint(1, 6)
             print(f"The Computer batting runs is {Computer_batting_runs}")
 
-        Computer_out(Computer_score)
+        if Computer_score < Your_score:
+            Computer_out(Computer_score)
 
         lead_runs = abs(Your_score - Computer_score)
 
@@ -211,7 +212,8 @@ if (Total % 2 == 0 and User_Choice == "even") or (Total % 2 != 0 and User_Choice
             Computer_bowling_runs = random.randint(1, 6)
             print(f"computer bowling runs is {Computer_bowling_runs}")
 
-        You_out(Your_score)
+        if  Computer_score > Your_score:
+            You_out(Your_score)
 
         lead_runs = abs(Your_score - Computer_score)
 
@@ -267,7 +269,8 @@ else:
             Computer_bowling_runs = random.randint(1, 6)
             print(f"computer bowling runs is {Computer_bowling_runs}")
 
-        You_out(Your_score)
+        if Your_score<Computer_score:
+            You_out(Your_score)
 
         lead_runs = abs(Your_score - Computer_score)
 
@@ -316,7 +319,8 @@ else:
             Computer_batting_runs = random.randint(1, 6)
             print(f"The Computer batting runs is {Computer_batting_runs}")
 
-        Computer_out(Computer_score)
+        if Computer_score < Your_score:
+            Computer_out(Computer_score)
 
         lead_runs = abs(Your_score - Computer_score)
 
