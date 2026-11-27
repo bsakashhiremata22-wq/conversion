@@ -13,7 +13,7 @@ print("1 - TEMPERATURE CONVERSION\n2 - DISTANCE  CONVERSION\n3 - TIME CONVERSION
 while True:
     try:
         choice=int(input("Enter your Choice for Unit Conversion: "))
-        if choice in range(1,3):
+        if choice in range(1,4):
             break
         else:
             print("\nEnter your Choice within the range")
@@ -22,7 +22,6 @@ while True:
 
 if choice == 1:
     print("\n\t\t\t\t TEMPERATURE CONVERSION")
-    print("\t\t\t\t ___________ __________")
 
     print("1. Celsius    ---→   Fahrenheit")
     print("2. Fahrenheit ---→   Celsius")
